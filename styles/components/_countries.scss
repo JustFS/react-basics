@@ -1,0 +1,44 @@
+.countries {
+  .sort-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 8px;
+    border-radius: 15px;
+    background: $color-3;
+    color: $color-1;
+    box-shadow: 0 2px 2px rgba(51, 51, 51, 0.3);
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+
+      input[type="radio"] {
+        transform: translate(-5px, 1px);
+      }
+    }
+  }
+  .cancel {
+    margin: 20px auto 30px;
+    width: 100%;
+
+    h5 {
+      border: 1px $color-3 solid;
+      text-align: center;
+      width: 180px;
+      margin: 0 auto;
+      border-radius: 10px;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background: $color-1;
+        border-color: $color-1;
+      }
+    }
+  }
+
+  .countries-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
