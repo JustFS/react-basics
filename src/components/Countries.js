@@ -17,20 +17,14 @@ const Countries = () => {
           "https://restcountries.eu/rest/v2/all?fields=name;population;region;capital;flag"
         )
         .then((res) => {
+          res.data.sort((a, b) => b.population - a.population);
           setData(res.data);
           setPlayOnce(false);
         });
     }
 
-    const sortedCountry = () => {
-      const countryObj = Object.keys(data).map((i) => data[i]);
-      const sortedArray = countryObj.sort((a, b) => {
-        return b.population - a.population;
-      });
-      sortedArray.length = rangeValue;
-      setSortedData(sortedArray);
-    };
-    sortedCountry();
+    data.length = rangeValue;
+    setSortedData(data);
   }, [data, rangeValue, playOnce]);
 
   return (
@@ -66,11 +60,10 @@ const Countries = () => {
         )}
       </div>
       <ul className="countries-list">
-        {sortedData
-          .filter((country) => country.region.includes(selectedRadio))
-          .map((country) => (
-            <Card country={country} key={country.name} />
-          ))}
+        {sortedData &&
+          sortedData
+            .filter((country) => country.region.includes(selectedRadio))
+            .map((country) => <Card country={country} key={country.name} />)}
       </ul>
     </div>
   );
