@@ -11,13 +11,14 @@ $color-4: rgb(32, 35, 42);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: $font-1;
 }
 body {
   margin: 0.4rem auto;
   max-width: 1296px;
-  font-family: $font-1;
   color: $color-3;
   background-color: $color-2;
+  padding: 14px;
 }
 li {
   list-style-type: none;
