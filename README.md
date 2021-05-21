@@ -1,3 +1,3 @@
-`npm i -g json-server`
+Installer JSON-SERVER : `npm i -g json-server`
 
-`json-server --w src/assets/db.json --port 3003`
+Faire tourner le back : `json-server --w src/assets/db.json --port 3003`
