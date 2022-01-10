@@ -1,19 +1,21 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import About from "./pages/About";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import News from "./pages/News";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Connect from "./pages/Connect";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/a-propos" exact component={About} />
-        <Route path="/news" exact component={News} />
-        <Route component={NotFound} />
-      </Switch>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/connexion" element={<Connect />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 };

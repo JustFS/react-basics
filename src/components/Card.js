@@ -1,21 +1,17 @@
 import React from "react";
 
-const Card = (props) => {
-  const { country } = props;
-
-  const numberFormat = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+const Card = ({ country }) => {
+  const numberFormat = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   };
 
   return (
     <li className="card">
-      <img src={country.flag} alt="flag" />
-      <div className="data-container">
-        <ul>
-          <li>{country.name}</li>
-          <li>{country.capital}</li>
-          <li>Pop. {numberFormat(country.population)}</li>
-        </ul>
+      <img src={country.flags.svg} alt="" />
+      <div className="infos">
+        <h2>{country.name.common}</h2>
+        <h4>{country.capital}</h4>
+        <p>Pop. {numberFormat(country.population)}</p>
       </div>
     </li>
   );

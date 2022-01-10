@@ -1,33 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/JosefinSans-Medium.ttf);
+}
 
-$font-1: "Poppins", sans-serif;
+$font-1: "font-1", sans-serif;
 
 $color-1: #61dafb;
-$color-2: #f7f7f7;
+$color-2: salmon;
 $color-3: #282c34;
-$color-4: rgb(32, 35, 42);
+$white: rgb(243, 243, 243);
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 * {
-  box-sizing: border-box;
-  margin: 0;
   padding: 0;
-  font-family: $font-1;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 body {
-  margin: 0.4rem auto;
-  max-width: 1296px;
-  color: $color-3;
-  background-color: $color-2;
-  padding: 14px;
+  background: $white;
+  font-family: $font-1;
+  // @include verticalCenter;
 }
 li {
   list-style-type: none;
 }
-a {
-  text-decoration: none;
-  color: $color-3;
-  cursor: pointer;
-}
-a:visited {
-  color: $color-3;
+
+textarea {
+  resize: none;
 }

@@ -1,26 +1,19 @@
 .logo {
   display: flex;
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translate(-50%);
-  background: url(./../assets/main.jpg) center/cover;
-  height: 60px;
-  width: 200px;
-  align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0px 1px 2px 0px rgba(51, 51, 51, 0.5);
-
-  h3 {
-    color: $color-2;
-    letter-spacing: 1px;
-  }
+  align-items: center;
+  margin: 5px auto;
+  width: 200px;
+  border-radius: 20px;
+  padding: 5px 0;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.307);
+  background: url(../../assets/img/main.jpg) center/cover;
 
   img {
-    height: 34px;
-    width: 34px;
-    margin-right: 10px;
-    object-fit: cover;
+    height: 40px;
+  }
+  h3 {
+    margin-left: 10px;
+    color: $color-1;
   }
 }
